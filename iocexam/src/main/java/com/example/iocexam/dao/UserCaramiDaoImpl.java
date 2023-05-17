@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import com.example.iocexam.domain.User;
-@Repository
-public class UserDaoImpl implements UserDao {
+@Repository("userCaramiDao")
+public class UserCaramiDaoImpl implements UserDao {
 
 	@Override
 	public User getuser(String email) {
@@ -22,7 +22,8 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public void addUser(User user) {
-		System.out.println(user + "의 정보가 잘 저장 되었습니다.");
+		System.out.println(user + "의 정보가 caramiDao를 이용해서 잘 저장 되었습니다.");
+
 	}
 
 }

@@ -1,9 +1,14 @@
 package com.example.iocexam.controller;
 
+import org.springframework.stereotype.Controller;
+
 import com.example.iocexam.domain.User;
 import com.example.iocexam.service.UserService;
 
+import jakarta.annotation.Resource;
+@Controller
 public class UserController {
+	@Resource
 	private UserService userService;
 	
 	public UserController(UserService userService) {
