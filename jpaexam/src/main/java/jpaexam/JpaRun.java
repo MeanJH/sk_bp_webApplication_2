@@ -16,14 +16,53 @@ public class JpaRun {
 			
 		try {
 			//등록 
-			Product product = new Product(); 
-			product.setId(2L);
-			product.setName("notebook");
-			product.setPrice(5000000);   // 비영속 상태!!   
+//			Product product = new Product(); 
+////			product.setId(2L);
+//			product.setName("cup22");
+//			product.setPrice(30000);   // 비영속 상태!!   
+//			
+//			System.out.println("before!!!");
+//			em.persist(product);      // 영속상태  --  영속상태라고 해서 DB 에 바로 적용되지는 않는다!!
+//			System.out.println("after!!!");
 			
-			System.out.println("before!!!");
-			em.persist(product);      // 영속상태  --  영속상태라고 해서 DB 에 바로 적용되지는 않는다!!
-			System.out.println("after!!!");
+			//조회 
+			
+//			Product findProduct = 	em.find(Product.class, 1L);
+//			
+//			System.out.println(findProduct);
+//			
+//			Product findProduct2 = 	em.find(Product.class, 1L);
+//			
+//			System.out.println(findProduct2);
+//			
+//			if(findProduct == findProduct2)
+//				System.out.println("같아요");
+//			else
+//				System.out.println("달라요");
+//			
+//			Product findProduct3 = 	em.find(Product.class, 2L);
+//			
+//			if(product == findProduct3)
+//				System.out.println("같아요");
+//			
+			
+			//수정 
+//			Product updateProduct = em.find(Product.class, 1L);
+//			updateProduct.setPrice(20000);
+//			updateProduct.setName("CUP");
+//			
+//			
+//			System.out.println(updateProduct);
+//			
+//			updateProduct.setPrice(200);
+//			updateProduct.setName("cup");
+			
+			//삭제
+			System.out.println("삭제 전");
+			Product delProdcut = em.find(Product.class, 1L);
+			em.remove(delProdcut);
+			
+			System.out.println("삭제 후!!");
 			
 			
 			
