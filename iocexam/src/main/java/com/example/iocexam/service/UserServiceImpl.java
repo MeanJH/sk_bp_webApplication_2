@@ -22,6 +22,9 @@ public class UserServiceImpl implements UserService {
 		System.out.println("userService(userDao) 생성!!");
 	}
 	
+	public void setUserDao(UserDao userCaramiDao) {
+		this.userDao = userCaramiDao;
+	}
 	
 
 	@Override
