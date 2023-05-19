@@ -1,6 +1,7 @@
 package com.example.todo.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.AfterAll;
@@ -59,5 +60,24 @@ public class TodoServiceTest {
 		assertNotNull(todo);
 		assertEquals(todo.getTodo(), "junit study33!!");
 	}
-
+	
+	@Test
+	void getTodo() throws Exception{
+		assertNotNull(todoService.getTodo(5L));
+		
+		Todo todo = todoService.getTodo(14L);
+		
+		assertEquals(todo.getTodo(), "string");
+	}
+	
+	@Test
+	void updateTodo() {
+		Todo findTodo = todoService.getTodo(6L);
+		boolean done = findTodo.isDone();
+		Todo updateTodo = todoService.updateTodo(6L);
+		
+//		assertEquals(findTodo, updateTodo);
+		
+		assertNotEquals(done, updateTodo.isDone());
+	}
 }
