@@ -1,8 +1,7 @@
 package com.example.todo.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -15,7 +14,8 @@ public class HelloController {
 	}
 	
 	@GetMapping("/hi")
-	public String hi(String msg, HttpServletRequest request) {
+	public String hi(String msg, Model model) {
+		
 		return "hi";
 	}
 

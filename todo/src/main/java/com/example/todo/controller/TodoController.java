@@ -20,6 +20,11 @@ public class TodoController {
 	@Autowired
 	private TodoService todoService;
 	
+	@GetMapping
+	public String todo() {
+		return "todo";
+	}
+	
 	@GetMapping("/list")
 	public String list(Model model) {
 		List<Todo> todos =todoService.getTodos();
